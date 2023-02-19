@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: "apple";
+    src: url(./SF-Pro.ttf);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    font-family: 'apple';
+}
+:root{
+    --primary-color:#fff;
+    --font-color:#000;
+    --todo-box:#fff;
+}
+.dark-mode{
+    --primary-color:#000;
+    --font-color:#fff;
+    --todo-box:#444444;
+}
+body{
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color:var(--font-color);
+    transition: .5s;
+}
+
+.to-do-box{
+    width: 500px;
+    border-radius:10px;
+    text-align: left;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head .body-mode{
+    font-size: 2rem;
+}
+.container{
+    padding:20px;
+}
+.to-do-box .head h1{
+    font-size:4rem;
+}
+.to-do-box .inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:10px;
+}
+.to-do-box .inputs input{
+    padding:10px;
+}
+.to-do-box .inputs input[type = "text"]{
+    flex-basis: 88%;
+    border:1px solid transparent;
+    background-color: transparent;
+    border-bottom: 1px solid #444444;
+    color:var(--font-color);
+    outline: none;
+}
+
+.to-do-box .inputs input[type = "submit"]{
+    flex-basis: 10%;
+    border:1px solid transparent;
+    background-color: transparent;
+    border-bottom: 1px solid #444444;
+    color:var(--font-color);
+}
+.to-do{
+    display: flex;
+    justify-content: space-between;
+    padding:1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-block:20px;
+    border-radius:10px;
+    background-color: var(--todo-box);
+    transition: .5s;
+}
+.completed{
+    transform: scale(0);
+}
+
+
